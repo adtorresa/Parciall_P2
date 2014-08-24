@@ -9,26 +9,28 @@
         <h:head>
             <f:facet name="first">
                 <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
-                <title>PrimeFaces</title>
+                <title>Parcial Corte I</title>
             </f:facet>
         </h:head> 
 
         <h:body>
             <h:form>
                 <p:layout fullPage="true">
-                    <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
-                        UNIVERSIDAD EL BOSQUE
-                        <br/><br/>
-                        Ingenieria de Software II - Parcial Corte I
+                    <p:layoutUnit position="north" size="174" resizable="true" closable="true" collapsible="true">
+                        <h:graphicImage url="http://www.whousesdrupal.com/sites/default/files/Logotipo_Universidad_El_Bosque.jpg?1357167879" width="500" height="150"/>
+                              Ingenieria de Software II - Parcial Corte I
                     </p:layoutUnit>
 
-                    <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    <p:layoutUnit position="south" size="40" closable="true" collapsible="true">
                         Por: Wilver Guillermo Zaldúa Espíndola
+                        <h:graphicImage url="http://www.protectia.eu/blog/wp-content/uploads/2013/08/Marca-registrada-grafica.jpg" width="20" height="10"/>
+   
                     </p:layoutUnit>
 
                     <p:layoutUnit position="center">
                         <p:accordionPanel>
                             <p:tab title="Ejercicio 1">
+                                <tr>Este ejercicio determina el numero mayor</tr>
                                 <h:panelGrid columns="2" cellpadding="10">
                                     <h:outputLabel for="name" value="Ingrese numero 1:" style="font-weight:bold" />
                                     <p:inputText id="numero1" value="#{Ejercicio1.a}" />
@@ -40,6 +42,7 @@
                             </p:tab>
 
                             <p:tab title="Ejercicio 2">
+                                <tr>Este ejercicio determina el numero mayor y el numero menor de los tres numeros ingresados </tr>
                                 <h:panelGrid columns="2" cellpadding="10">
                                     <h:outputLabel for="name" value="Ingrese numero 1:" style="font-weight:bold" />
                                     <p:inputText id="numero3" value="#{Ejercicio2.valor1}" />
@@ -53,6 +56,7 @@
                             </p:tab>
 
                             <p:tab title="Ejercicio 3">
+                                <tr>Sumatoria de los primeros 10 numeros enteros</tr>
                                 <h:panelGrid columns="2" cellpadding="10">
                                     <p:commandButton value="Submit" action="#{Ejercicio3.hacersumaHasta10()}" update="display4" icon="ui-icon-check" />
                                     <h:outputText id="display4" value="#{Ejercicio3.resultado}" />
@@ -60,6 +64,7 @@
                             </p:tab>
 
                             <p:tab title="Ejercicio 4">
+                                <tr>Este ejercicio determina la Hipotenusa de triangulo rectangulo</tr>
                                 <h:panelGrid columns="2" cellpadding="10">
                                     <h:outputLabel for="name" value="Ingrese el Cateto A:" style="font-weight:bold" />
                                     <p:inputText id="numero6" value="#{Ejercicio4.a}" />
@@ -71,6 +76,7 @@
                             </p:tab>
 
                             <p:tab title="Ejercicio 5">
+                                <tr>Este ejercicio determina el area y el volumen de un cilindro con los suiquientes datos:</tr>
                                 <h:panelGrid columns="2" cellpadding="10">
                                     <h:outputLabel for="name" value="Ingrese Radio:" style="font-weight:bold" />
                                     <p:inputText id="numero8" value="#{Ejercicio5.r}" />
@@ -84,6 +90,7 @@
                             </p:tab>
 
                             <p:tab title="Ejercicio 6">
+                                <tr>Este ejercicio determina si el numero ingresado es par o impar</tr>
                                 <h:panelGrid columns="2" cellpadding="10">
                                     <h:outputLabel for="name" value="Ingrese numero:" style="font-weight:bold" />
                                     <p:inputText id="numero10" value="#{Ejercicio6.a}" />
@@ -93,6 +100,7 @@
                             </p:tab>
 
                             <p:tab title="Ejercicio 7">
+                                <tr>Este ejercicio convierte calificaciones numericas a letra, se asume que la notas esta comprendida entre 1 y 20 </tr>
                                 <h:panelGrid columns="2" cellpadding="10">
                                     <h:outputLabel for="name" value="Ingrese Nota Numerica" style="font-weight:bold" />
                                     <p:inputText id="numero11" value="#{Ejercicio7.calificacion}" />
@@ -102,6 +110,7 @@
                             </p:tab>
 
                             <p:tab title="Ejercicio 8">
+                                <tr>Este ejercicio realiza un ordenamiente de menor a mayor ingresando 2 numeros</tr>
                                 <h:panelGrid columns="2" cellpadding="10">
                             <h:outputLabel for="name" value="Ingrese numero 1:" style="font-weight:bold" />
                             <p:inputText id="numero12" value="#{Ejercicio8.a}" />
