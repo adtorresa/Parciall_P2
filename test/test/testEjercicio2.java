@@ -42,6 +42,6 @@ public class testEjercicio2 {
         n.setValor2(9);
         n.setValor3(1);
         n.cualEsMayor();
-        Assert.assertEquals(n.getResultado(),"El numero mayor es:9");
+        Assert.assertEquals(n.getResultado(),"El numero mayor es:9 y el numero menor es: 1");
     }
 }

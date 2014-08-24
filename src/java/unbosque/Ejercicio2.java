@@ -58,16 +58,41 @@ public class Ejercicio2 {
     public void cualEsMayor(){
         if(valor1>valor2){
             if(valor1>valor3){
-                resultado = "El numero mayor es:"+valor1;
+                if(valor2>valor3){
+                    resultado = "El numero mayor es: "+valor1+" y el numero menor es: " + valor3;
+                }else{
+                    resultado = "El numero mayor es:"+valor1+" y el numero menor es: " + valor2;
+                }
+                
             }else if(valor2>valor3){
-                resultado = "El numero mayor es:"+valor2;
+                if(valor3>valor1){
+                    resultado = "El numero mayor es:"+valor2+" y el numero menor es: " + valor1;
+                }else{
+                    resultado = "El numero mayor es:"+valor2+" y el numero menor es: " + valor3;
+                }
+                
             }else{
-                resultado = "El numero mayor es:"+valor3;
+                if(valor1>valor2){
+                   resultado = "El numero mayor es:"+valor3+" y el numero menor es: " + valor2;
+                }else{
+                   resultado = "El numero mayor es:"+valor3+" y el numero menor es: " + valor1; 
+                }
+                
             }
         }else if(valor2>valor3){
-            resultado = "El numero mayor es:"+valor2;
+            if(valor1>valor3){
+                resultado = "El numero mayor es:"+valor2+" y el numero menor es: " + valor3;
+            }else{
+                resultado = "El numero mayor es:"+valor2+" y el numero menor es: " + valor1;
+            }
+            
         }else{
-            resultado = "El numero mayor es:"+valor3;
+            if(valor2>valor1){
+               resultado = "El numero mayor es:"+valor3+" y el numero menor es: " + valor1; 
+            }else{
+                resultado = "El numero mayor es:"+valor3+" y el numero menor es: " + valor2;
+            }
+            
         }
     }
    
