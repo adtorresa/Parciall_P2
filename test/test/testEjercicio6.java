@@ -18,14 +18,17 @@ public class testEjercicio6 {
     
     @Test
     public void testgetvalor(){
-        Ejercicio6 n = new Ejercicio6(5);
-        Assert.assertEquals(n.getvalor(), 5);
+        Ejercicio6 n = new Ejercicio6();
+        n.setA(4);
+        Assert.assertEquals(n.getA(), 4);
     }
     
     @Test
     public void testesUnNumeroPar(){
-        Ejercicio6 n = new Ejercicio6(8);
-        Assert.assertEquals(n.esUnNumeroPar(), true);
+        Ejercicio6 n = new Ejercicio6();
+        n.setA(5);
+        n.esUnNumeroPar();
+        Assert.assertEquals(n.getResultado(), "El numero 5 es impar");
     }
     
 }

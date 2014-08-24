@@ -18,14 +18,17 @@ public class testEjercicio7 {
     
     @Test
     public void testgetCalificacion(){
-        Ejercicio7 n = new Ejercicio7(20);
+        Ejercicio7 n = new Ejercicio7();
+        n.setCalificacion(20);
         Assert.assertEquals(n.getCalificacion(), 20);
     }
     
     @Test
     public void testgetNuevaNota(){
-        Ejercicio7 n = new Ejercicio7(20);
-        Assert.assertEquals(n.getNuevaNota(), "A");
+        Ejercicio7 n = new Ejercicio7();
+        n.setCalificacion(20);
+        n.calculoNuevaNota();
+        Assert.assertEquals(n.getResultado(), "La nueva nota es : A");
         
         
     }

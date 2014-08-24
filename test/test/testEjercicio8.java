@@ -18,20 +18,25 @@ public class testEjercicio8 {
     
     @Test
     public void testgetNumero1aOrdenar(){
-        Ejercicio8 n = new Ejercicio8(2,3);
-        Assert.assertEquals(n.getNumero1aOrdenar(), 2);
+        Ejercicio8 n = new Ejercicio8();
+        n.setA(3);
+        Assert.assertEquals(n.getA(),3);
     }
     
     @Test
     public void testgetNumero2aOrdenar(){
-        Ejercicio8 n = new Ejercicio8(2,3);
-        Assert.assertEquals(n.getNumero2aOrdenar(), 3);
+        Ejercicio8 n = new Ejercicio8();
+        n.setB(4);
+        Assert.assertEquals(n.getB(),4);
     }
     
     @Test
     public void testnumerosOdenados(){
-        Ejercicio8 n = new Ejercicio8(50,9);
-        Assert.assertEquals(n.numerosOdenados(), "9,50");
+        Ejercicio8 n = new Ejercicio8();
+        n.setA(5);
+        n.setB(1);
+        n.numerosOdenados();
+        Assert.assertEquals(n.getResultado(), "El orden de menor a mayor es: 1,5");
     }
     
     
