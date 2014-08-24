@@ -14,43 +14,34 @@ import unbosque.Ejercicio2;
  * @author F211
  */
 public class testEjercicio2 {
-    
-     @Test
+    @Test
     public void testgetValor1(){
-        Ejercicio2 n = new Ejercicio2(2,4,5);
-        Assert.assertEquals(n.getValor1(), 2);     
+        Ejercicio2 n = new Ejercicio2();
+        n.setValor1(3);
+        Assert.assertEquals(n.getValor1(),3);     
     }
     
-     @Test
+    @Test
     public void testgetValor2(){
-        Ejercicio2 n = new Ejercicio2(2,4,5);
-        Assert.assertEquals(n.getValor2(), 4);     
+        Ejercicio2 n = new Ejercicio2();
+        n.setValor2(3);
+        Assert.assertEquals(n.getValor2(),3);
     }
     
     @Test
     public void testgetValor3(){
-        Ejercicio2 n = new Ejercicio2(2,4,5);
-        Assert.assertEquals(n.getValor3(), 5);     
+        Ejercicio2 n = new Ejercicio2();
+        n.setValor3(3);
+        Assert.assertEquals(n.getValor3(),3);
     }
     
     @Test
-    public void testaEsMayorQueLosOtrosNumeros(){
-        Ejercicio2 n = new Ejercicio2(5,2,1);
-        Assert.assertEquals(n.aEsMayor(), true);     
+    public void cualEsMayorNumeroMayor(){
+        Ejercicio2 n = new Ejercicio2();
+        n.setValor1(3);
+        n.setValor2(9);
+        n.setValor3(1);
+        n.cualEsMayor();
+        Assert.assertEquals(n.getResultado(),"El numero mayor es:9");
     }
-    
-    @Test
-    public void testbEsMayorQueLosOtrosNumeros(){
-        Ejercicio2 n = new Ejercicio2(2,7,1);
-        Assert.assertEquals(n.bEsMayor(), true);     
-    }
-    
-    @Test
-    public void testcEsMayorQueLosOtrosNumeros(){
-        Ejercicio2 n = new Ejercicio2(2,2,8);
-        Assert.assertEquals(n.cEsMayor(), true);     
-    }
-    
-    
-    
 }

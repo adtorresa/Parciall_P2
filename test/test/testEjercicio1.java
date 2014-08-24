@@ -42,18 +42,10 @@ public class testEjercicio1 {
     @Test
     public void cualEsMayor(){
         Ejercicio1 n = new Ejercicio1();
-        n.setA(2);
-        n.setB(3);
+        n.setA(6);
+        n.setB(2);
         n.operacionCualesMayor();
-        Assert.assertEquals(n.getResultado(),"El numero menor es: 3");
+        Assert.assertEquals(n.getResultado(),"El numero mayor es: 6");
     }
     
-    @Test
-    public void cualEsMenor(){
-        Ejercicio1 n = new Ejercicio1();
-        n.setA(2);
-        n.setB(3);
-        n.operacionCualesMayor();
-        Assert.assertEquals(n.getResultado(),"El numero menor es: 2");
-    }
 }

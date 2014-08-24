@@ -37,14 +37,11 @@ public class Ejercicio3 {
 
  
     
-    
-    
-    
     public void hacersumaHasta10(){
         for(int c = 1;c<=10;c++){
             suma= suma+c;
         }
-        resultado = "la suma de los primeros" + 10 + " es: " + suma;
+        resultado = "la suma de los primeros " + 10 + " es: " + suma;
     }
     
     

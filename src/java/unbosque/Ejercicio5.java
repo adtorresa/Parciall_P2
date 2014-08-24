@@ -63,7 +63,7 @@ public class Ejercicio5 {
     
     public void calArea() {
         calarea = 2*(Math.PI)*r*(h*r);
-        volumen = "El area es " + calarea;
+        area = "El area es " + calarea;
     }
     
 }

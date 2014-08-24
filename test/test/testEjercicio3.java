@@ -16,25 +16,19 @@ import unbosque.Ejercicio3;
 public class testEjercicio3 {
     
     @Test
-    public void testasignarContador(){
+    public void testgetValor1(){
         Ejercicio3 n = new Ejercicio3();
-        Assert.assertEquals(n.asignarContador(2), 3);     
+        n.setN(4);
+        Assert.assertEquals(n.getN(),4);     
     }
     
     @Test
-    public void testsuma(){
+    public void cualEsMayorNumeroMayor(){
         Ejercicio3 n = new Ejercicio3();
-        Assert.assertEquals(n.sumaContador(2,2), 4);     
+        n.setN(9);
+        n.hacersumaHasta10();
+        Assert.assertEquals(n.getResultado(),"la suma de los primeros 10 es: 55");
     }
     
-    @Test
-    public void testhacersumaHasta10(){
-        Ejercicio3 n = new Ejercicio3();
-        Assert.assertEquals(n.hacersumaHasta10(), 55); 
-    }
-    
-    
-    
-
     
 }

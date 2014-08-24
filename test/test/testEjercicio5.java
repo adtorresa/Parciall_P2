@@ -18,26 +18,35 @@ public class testEjercicio5 {
     
     @Test
     public void testgetRadio(){
-        Ejercicio5 n = new Ejercicio5(2,3);
-        Assert.assertEquals(n.getRadio(), 2);
+        Ejercicio5 n = new Ejercicio5();
+        n.setR(4);
+        Assert.assertEquals(n.getR(), 4);
     }
     
     @Test
     public void testgetAltura(){
-        Ejercicio5 n = new Ejercicio5(2,3);
-        Assert.assertEquals(n.getAltura(), 3);
+        Ejercicio5 n = new Ejercicio5();
+        n.setH(6);
+        Assert.assertEquals(n.getH(), 6);
     }
     
     @Test
     public void testgetVolumen(){
-        Ejercicio5 n = new Ejercicio5(2,3);
-        Assert.assertEquals(n.getVolumen(), 37.69911184307752);
+        Ejercicio5 n = new Ejercicio5();
+        n.setR(4);
+        n.setH(6);
+        n.calVolumen();
+        Assert.assertEquals(n.getVolumen(),"El volumen es 301.59289474462014");
     }
     
     @Test
     public void testgetArea(){
-        Ejercicio5 n = new Ejercicio5(2,3);
-        Assert.assertEquals(n.getArea(), 75.39822368615503);
+        Ejercicio5 n = new Ejercicio5();
+        n.setR(2);
+        n.setH(1);
+        n.calArea();
+        Assert.assertEquals(n.getArea(),"El area es 25.132741228718345");
     }
+    
     
 }
