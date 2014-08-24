@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>PrimeFaces</title>
+            </f:facet>
+        </h:head> 
+
+        <h:body>
+            <h:form>
+                <p:layout fullPage="true">
+                    <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                        UNIVERSIDAD EL BOSQUE
+                        <br/><br/>
+                        Ingenieria de Software II - Parcial Corte I
+                    </p:layoutUnit>
+
+                    <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                        Por: Wilver Guillermo Zaldúa Espíndola
+                    </p:layoutUnit>
+
+                    <p:layoutUnit position="center">
+                        <p:accordionPanel>
+                            <p:tab title="Ejercicio 1">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputLabel for="name" value="Ingrese numero 1:" style="font-weight:bold" />
+                                    <p:inputText id="numero1" value="#{Ejercicio1.a}" />
+                                    <h:outputLabel for="name" value="Ingrese numero 2:" style="font-weight:bold" />
+                                    <p:inputText id="numero2" value="#{Ejercicio1.b}" />
+                                    <p:commandButton value="Submit" action="#{Ejercicio1.operacionCualesMayor()}" update="display2" icon="ui-icon-check" />
+                                    <h:outputText id="display2" value="#{Ejercicio1.resultado}" />   
+                                </h:panelGrid>
+                            </p:tab>
+
+                            <p:tab title="Ejercicio 2">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputLabel for="name" value="Ingrese numero 1:" style="font-weight:bold" />
+                                    <p:inputText id="numero3" value="#{Ejercicio2.valor1}" />
+                                    <h:outputLabel for="name" value="Ingrese numero 2:" style="font-weight:bold" />
+                                    <p:inputText id="numero4" value="#{Ejercicio2.valor2}" />
+                                    <h:outputLabel for="name" value="Ingrese numero 3:" style="font-weight:bold" />
+                                    <p:inputText id="numero5" value="#{Ejercicio2.valor3}" />
+                                    <p:commandButton value="Submit" action="#{Ejercicio2.cualEsMayor()}" update="displa3" icon="ui-icon-check" />
+                                    <h:outputText id="displa3" value="#{Ejercicio2.resultado}" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                            <p:tab title="Ejercicio 3">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <p:commandButton value="Submit" action="#{Ejercicio3.hacersumaHasta10()}" update="display4" icon="ui-icon-check" />
+                                    <h:outputText id="display4" value="#{Ejercicio3.resultado}" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                            <p:tab title="Ejercicio 4">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputLabel for="name" value="Ingrese el Cateto A:" style="font-weight:bold" />
+                                    <p:inputText id="numero6" value="#{Ejercicio4.a}" />
+                                    <h:outputLabel for="name" value="Ingrese el Cateto A:" style="font-weight:bold" />
+                                    <p:inputText id="numero7" value="#{Ejercicio4.b}" />
+                                    <p:commandButton value="Submit" action="#{Ejercicio4.calcularHipotenusa()}" update="display5" icon="ui-icon-check" />
+                                    <h:outputText id="display5" value="#{Ejercicio4.resultado}" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                            <p:tab title="Ejercicio 5">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputLabel for="name" value="Ingrese Radio:" style="font-weight:bold" />
+                                    <p:inputText id="numero8" value="#{Ejercicio5.r}" />
+                                    <h:outputLabel for="name" value="Ingrese Altura:" style="font-weight:bold" />
+                                    <p:inputText id="numero9" value="#{Ejercicio5.h}" />
+                                    <p:commandButton value="Calcular Volumen" action="#{Ejercicio5.calVolumen()}" update="display6" icon="ui-icon-check" />
+                                    <h:outputText id="display6" value="#{Ejercicio5.volumen}" />
+                                    <p:commandButton value="Calcular Area" action="#{Ejercicio5.calArea()}" update="display6" icon="ui-icon-check" />
+                                    <h:outputText id="display7" value="#{Ejercicio5.area}" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                            <p:tab title="Ejercicio 6">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputLabel for="name" value="Ingrese numero:" style="font-weight:bold" />
+                                    <p:inputText id="numero10" value="#{Ejercicio6.a}" />
+                                    <p:commandButton value="Submit" action="#{Ejercicio6.esUnNumeroPar()}" update="display8" icon="ui-icon-check" />
+                                    <h:outputText id="display8" value="#{Ejercicio6.resultado}" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                            <p:tab title="Ejercicio 7">
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <h:outputLabel for="name" value="Ingrese Nota Numerica" style="font-weight:bold" />
+                                    <p:inputText id="numero11" value="#{Ejercicio7.calificacion}" />
+                                    <p:commandButton value="Submit" action="#{Ejercicio7.calculoNuevaNota()}" update="display9" icon="ui-icon-check" />
+                                    <h:outputText id="display9" value="#{Ejercicio7.resultado}" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                            <p:tab title="Ejercicio 8">
+                                <h:panelGrid columns="2" cellpadding="10">
+                            <h:outputLabel for="name" value="Ingrese numero 1:" style="font-weight:bold" />
+                            <p:inputText id="numero12" value="#{Ejercicio8.a}" />
+                            <h:outputLabel for="name" value="Ingrese numero 2:" style="font-weight:bold" />
+                            <p:inputText id="numero13" value="#{Ejercicio8.b}" />
+                            <p:commandButton value="Submit" action="#{Ejercicio8.numerosOdenados()}" update="display10" icon="ui-icon-check" />
+                            <h:outputText id="display10" value="#{Ejercicio8.resultado}" />
+                                </h:panelGrid>
+                            </p:tab>
+
+                        </p:accordionPanel>       
+
+                    </p:layoutUnit>
+                    
+                </p:layout>
+                
+
+  
+            </h:form>
+    
+        </h:body>
+
+    </f:view>
+</html>
+
