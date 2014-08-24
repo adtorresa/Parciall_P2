@@ -66,9 +66,9 @@
                             <p:tab title="Ejercicio 4">
                                 <tr>Este ejercicio determina la Hipotenusa de triangulo rectangulo</tr>
                                 <h:panelGrid columns="2" cellpadding="10">
-                                    <h:outputLabel for="name" value="Ingrese el Cateto A:" style="font-weight:bold" />
+                                    <h:outputLabel for="name" value="Ingrese el Cateto Opuesto:" style="font-weight:bold" />
                                     <p:inputText id="numero6" value="#{Ejercicio4.a}" />
-                                    <h:outputLabel for="name" value="Ingrese el Cateto A:" style="font-weight:bold" />
+                                    <h:outputLabel for="name" value="Ingrese el Cateto Adyacente:" style="font-weight:bold" />
                                     <p:inputText id="numero7" value="#{Ejercicio4.b}" />
                                     <p:commandButton value="Submit" action="#{Ejercicio4.calcularHipotenusa()}" update="display5" icon="ui-icon-check" />
                                     <h:outputText id="display5" value="#{Ejercicio4.resultado}" />
@@ -84,7 +84,7 @@
                                     <p:inputText id="numero9" value="#{Ejercicio5.h}" />
                                     <p:commandButton value="Calcular Volumen" action="#{Ejercicio5.calVolumen()}" update="display6" icon="ui-icon-check" />
                                     <h:outputText id="display6" value="#{Ejercicio5.volumen}" />
-                                    <p:commandButton value="Calcular Area" action="#{Ejercicio5.calArea()}" update="display6" icon="ui-icon-check" />
+                                    <p:commandButton value="Calcular Area" action="#{Ejercicio5.calArea()}" update="display7" icon="ui-icon-check" />
                                     <h:outputText id="display7" value="#{Ejercicio5.area}" />
                                 </h:panelGrid>
                             </p:tab>
